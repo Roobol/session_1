@@ -3,11 +3,22 @@ title: "My First Markdown"
 author: "C.J.J. Roobol"
 date: "17 mei 2018"
 output: html_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+Download sleep study data
+```{r}
+library(readr)
+sleep <- read_csv("https://vincentarelbundock.github.io/Rdatasets/csv/lme4/sleepstudy.csv") # no spaces
+head(sleep)
+tail(sleep)
+```
+
 
 This is my first markdown file. Yay!
 
